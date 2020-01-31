@@ -14,7 +14,7 @@
 <code>git remote -v</code>
 </pre>
 5. Branch를 생성합니다.
-<pre><code> git checkout -b <branchName></code></pre>
+<pre><code> git checkout -b 'branchName'</code></pre>
 6. 소스 코드를 생성, 수정 한 후 commit 를 생성합니다.
   - commit은 [이름][주차.스터디주제]간략한 커밋 내용
   - ex) [김제니][1.DP]1101문제 수정
@@ -24,7 +24,7 @@ git commit -m "[김제니][1.DP]1101문제 수정"
 </code></pre>
 7. 개인 Remote Repository에 해당 브랜치를 push 합니다.
     - push 전 git pull upstream를 통해 Upstream Repository의 최신 변경사항과 일치시킵니다.
-<pre> <code>git push origin <branchName></code></pre>
+<pre> <code>git push origin 'branchName'</code></pre>
 8. 개인 Remote Repository에서 간단한 코멘트와 함께 Pull Request를 생성합니다.
 9. git에서는 한글 파일명을 제공하지 않습니다. 터미널에서 한글 파일명이 깨져보이는 현상 제거
 <pre><code>git config --global core.quotepath false </code></pre>
