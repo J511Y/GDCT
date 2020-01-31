@@ -6,11 +6,11 @@
 2. 해당 프로젝트 Fork
     - git repository fork를 하여 개인 git 계정에 repository를 생성한다.
 3. 개인 remote repository를 Local로 clone 합니다.
-<pre><code>git clone https://github.com/<username>/GDCT.git</code></pre>
+<pre><code>git clone https://github.com\/<username>\/GDCT.git</code></pre>
 4. public repository를 Upstream remote로 추가합니다.
     - origin, upstream remote가 생성된 것을 확인할 수 있습니다.
 <pre>
-<code>git remote add upstream https://github.com/J511Y/GDCT.git</code>
+<code>git remote add upstream https://github.com\/J511Y\/GDCT.git</code>
 <code>git remote -v</code>
 </pre>
 5. Branch를 생성합니다.
