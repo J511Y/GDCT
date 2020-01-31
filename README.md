@@ -1,4 +1,4 @@
-# 알고리즘 스터디
+# 코딩테스트 스터디
 
 ## GitHub 사용방법
 > Forking WorkFlow
