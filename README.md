@@ -19,7 +19,7 @@
   - commit은 [이름][주차.스터디주제]간략한 커밋 내용
   - ex) [김제니][1.DP]1101문제 수정
 <pre><code>
-git add "폴더 / 파일경로"
+git add "폴더 or 파일경로"
 git commit -m "[김제니][1.DP]1101문제 수정"
 </code></pre>
 7. 개인 Remote Repository에 해당 브랜치를 push 합니다.
