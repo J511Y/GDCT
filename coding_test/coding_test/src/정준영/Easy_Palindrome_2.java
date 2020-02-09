@@ -1,5 +1,12 @@
 package 정준영;
-
+/*
+ * 유준혁 멘토 덧댐 2020.02.09 20:16
+ * ---------------------------
+ * 일반적인 방법.
+ * 입력받은 문자열의 양쪽 끝에서부터 하나씩 확인해보는 방식.
+ * 
+ * 입출력 스트림과 반복문 변경 (for -> while) 했다는 것 외에는 다른 점이 없으므로 한 가지 풀이로 분류
+ */
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
