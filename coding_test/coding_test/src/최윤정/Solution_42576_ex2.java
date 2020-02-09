@@ -1,4 +1,4 @@
-package cyj;
+package 최윤정;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -25,19 +25,47 @@ import java.util.Stack;
 
 //테스트 케이스는 통과인데... 
 // 효율 0...
+
+/*
+ * 유준혁 멘토 덧댐 2020.02.10 00:02
+ * ---------------------------
+ * 코드 상에서는 result에 어떤것도 담아주지 않기 때문에 통과하지 못했겠지만
+ * 흐름상으로 보자면 hm의 모든 키값에 대해 밸류가 1이라면 걔가 바로 통과하지 못한 선수라고 하는 듯 하다.
+ * 정확히 모르겠어서 확인이 필요하겠지만.. 효율 안나오는건 몰랐넹 코드 짜고 제출해보고 오겠음
+ * 
+ * 효율이 구데기인건 맞지만 간당간당하게 통과는 한 듯..?
+ * 코드를 봐야 알겠네여
+ */
 public class Solution_42576_ex2 {
 	public String solution(String[] participant, String[] completion) {
-		HashMap<String, Integer> hm= new HashMap<String,Integer>();
+//		최윤정 코드
+//		HashMap<String, Integer> hm= new HashMap<String,Integer>();
+//		String result="";
+//		for (String c : completion) {
+//			hm.put(c, 1);
+//		}
+//		System.out.println(hm);
+//		for (String p : participant) {
+//			hm.putIfAbsent(p, 2);
+//			hm.put(p, hm.getOrDefault(p, -1));
+//		}
+//		System.out.println(hm);
+//    	return result;
+    	
+//		유준혁 코드
+    	HashMap<String, Integer> hm= new HashMap<String,Integer>();
 		String result="";
-		for (String c : completion) {
-			hm.put(c, 1);
-		}
-		System.out.println(hm);
 		for (String p : participant) {
-			hm.putIfAbsent(p, 2);
-			hm.put(p, hm.getOrDefault(p, -1));
+			hm.put(p, hm.getOrDefault(p, 0) + 1);
 		}
-		System.out.println(hm);
+		
+		for (String c : completion) {
+			hm.put(c, hm.get(c) - 1);
+		}
+		
+		for (String p : participant) {
+			if(hm.get(p) != 0) result = p;
+		}
     	return result;
     }
 
