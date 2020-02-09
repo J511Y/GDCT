@@ -1,4 +1,4 @@
-package cyj;
+package 최윤정;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,6 +24,15 @@ import java.io.InputStreamReader;
  * 첫째 줄에 모든 폭발이 끝난 후 남은 문자열을 출력한다.
  */
 
+/*
+ * 유준혁 멘토 덧댐 2020.02.09 23:53
+ * ---------------------------
+ * 아마도 String.Replace를 직접 구현하고자 한 것 처럼 보임
+ * 최악의 경우를 상정하는 연습이 필요해보임.
+ * 100만 자리의 문자열이 들어오고, 가운데서 부터 연쇄 폭발로 모든 문자열이 사라진다고 한다면
+ * 저 구문이 얼만큼의 비용을 소비할지 가늠해보세용
+ */
+
 // 시간초과 ㅜㅡㅠ
 public class Main_9935 {
 	public static void main(String[] args) throws IOException {
@@ -35,8 +44,13 @@ public class Main_9935 {
 		if((len1>=1 || len1<=1000000)&&(len2>=1||len2<=36)) {
 			while(str1.indexOf(str2)!=-1) {
 				len1 = str1.length();
-				str1= str1.substring(0, str1.indexOf(str2)).concat(str1.substring(str1.indexOf(str2)+len2,len1));
+				str1 = str1.substring(0, str1.indexOf(str2)).concat(str1.substring(str1.indexOf(str2)+len2,len1));
 			}
+			
+//			유준혁 멘토 코드
+//			while(str1.indexOf(str2) != -1) {
+//				str1 = str1.replace(str2, "");
+//			}
 			System.out.println((str1.trim().length()==0)?"FRULA":str1);
 		}
 	}
