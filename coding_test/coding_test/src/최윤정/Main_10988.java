@@ -1,4 +1,4 @@
-package cyj;
+package 최윤정;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,7 +13,14 @@ import java.util.Stack;
  * 첫째 줄에 팰린드롬이면 1, 아니면 0을 출력한다.
  */
 
-
+/*
+ * 유준혁 멘토 덧댐 2020.02.09 23:43
+ * ---------------------------
+ * StringBuffer/Builder의 reverse 메서드를 직접 구현한 방법
+ * reverse 메서드의 내부적인 구현 역시 이와 비슷한 방식으로 이루어져있다.
+ * (기존 string -> stringBuilder 이동 후 toString은 아니긴 함.)
+ * (배열로 가지고 있는 값들을 switch 시키는 것 뿐임)
+ */
 // 방식 1
 public class Main_10988 {
 	public static void main(String[] args) throws IOException  {
