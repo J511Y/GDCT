@@ -1,5 +1,10 @@
 package 박민진;
-
+/*
+ * 유준혁 멘토 덧댐 2020.02.09 20:20
+ * ---------------------------
+ * StringBuffer의 reverse 메서드를 사용하는 방법
+ * 입력받은 문자열을 reverse 하여 같은 값을 지니고 있는지 확인하면 팰린드롬인지 알 수 있음.
+ */
 import java.util.Scanner;
 
 public class Palindrome2 {
