@@ -12,13 +12,8 @@ package 최윤정;
  * 조금 더 보강이 필요하겠지만 이 정도면 접근은 잘 했음.
  */
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
-
+import java.io.*;
+import java.util.*;
 /*
  * 결혼식
  * -그래프
@@ -29,23 +24,25 @@ public class Main_5567 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
 		int m = Integer.parseInt(br.readLine());
-		Set<Integer> set = new HashSet<Integer>();
+//		Set<Integer> set = new HashSet<Integer>();
 		int arr[][] = new int[n+1][n+1];
+		int[] arr2 = new int[n+1];
 		while (m-- > 0) {
 			String[] st = br.readLine().split(" ");
-			arr[Integer.parseInt(st[0])][Integer.parseInt(st[1])] = 1;
+			int a = Integer.parseInt(st[0]), b = Integer.parseInt(st[1]); // 양방향으로 넣어주기 위함
+			arr[a][b] = arr[b][a] = 1;
 		}
-		for (int i = 0; i < arr.length; i++) {
-			if (arr[1][i] == 1) {// 2,3
-				set.add(i);
-				for (int j = i; j < arr[i].length; j++) {
-					if (arr[i][j] == 1) {
-						set.add(j);
-					}
-				}
-			}
-		}
-		System.out.println(set.size());
+//		for (int i = 0; i < arr.length; i++) {
+//			if (arr[1][i] == 1) {// 2,3
+//				set.add(i);
+//				for (int j = i; j < arr[i].length; j++) {
+//					if (arr[i][j] == 1) {
+//						set.add(j);
+//					}
+//				}
+//			}
+//		}
+//		System.out.println(set.size());
 //		System.out.println(cnt);
 //		System.out.println();
 //		for (int i = 0; i < arr.length; i++) {
@@ -54,6 +51,46 @@ public class Main_5567 {
 //			}
 //			System.out.println();
 //		}
+		
+		// 유준혁 멘토 풀이
+//		Queue<int[]> q = new LinkedList<>(); // BFS정석풀이, int[0] = 인덱스, int[1] = 0 본인 1 친구 2 친구의친구
+//		int[] vst = new int[n+1]; // 방문여부를 판단해줄 vst배열
+//		int cnt = 0; // 출력값
+//		q.add(new int[] {1, 0}); // 본인을 넣어줌.
+//		vst[1] = 1; // 본인 방문확인
+//		while(!q.isEmpty()){
+//			int[] poll = q.poll();
+//			int idx = poll[0], link = poll[1];
+//			if(link < 2) { // 친구의 친구까지만 확인하기 위함
+//				for(int i = 1; i < n + 1; i++) {
+//					if(arr[idx][i] == 1 && vst[i] == 0) { // 서로 친구 관계이면서 아직 방문하지 않았을 경우에만 add
+//						q.add(new int[] {i, link + 1}); // 관계를 1 증가시켜서 넣어줌
+//						cnt++; // 출력값 증가
+//						vst[i] = 1; // 방문여부 변경
+//					}
+//				}
+//			}
+//		}
+//		System.out.println(cnt);
+		
+		// 유준혁 멘토 풀이 2 기존 코드 변형
+		// ---------------------
+		// 제출하고 다시 보니까 기존 코드랑 다른게 없네 엌ㅋㅋㅋㅋ 제출했는데 틀렸다면 양방향처리를 안해줘서 그렇겠네요 + j의 시작점
+		for(int i = 1 ; i < n + 1; i++) {
+			if(arr[1][i] == 1) { // 본인과 직접적인 친구 (1)
+				arr2[i] = 1;
+				for(int j = 2; j < n + 1; j++) { // 본인인 1은 제외
+					if(arr[i][j] == 1) { // 친구의 친구 (2)
+						arr2[j] = 1;
+					}
+				}
+			}
+		}
+		int cnt = 0;
+		for(int i = 2; i < n + 1; i++) {
+			if(arr2[i] == 1) cnt++;
+		}
+		System.out.println(cnt);
 	}
 }
 
