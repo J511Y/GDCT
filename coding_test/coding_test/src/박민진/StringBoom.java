@@ -1,5 +1,5 @@
 
-package cote;
+package ¹Ú¹ÎÁø;
 
 import java.util.Scanner;
 
