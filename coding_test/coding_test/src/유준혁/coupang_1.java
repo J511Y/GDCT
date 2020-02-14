@@ -1,5 +1,5 @@
-package coupang_2020;
-// í’€ë‹¤ë§ì•˜ìŒ
+package À¯ÁØÇõ;
+// Ç®´Ù¸»¾ÒÀ½
 import java.util.*;
 public class coupang_1 {
 	static int len, max;

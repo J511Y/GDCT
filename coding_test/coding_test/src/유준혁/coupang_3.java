@@ -1,17 +1,17 @@
-package coupang_2020;
+package À¯ÁØÇõ;
 
 import java.util.*;
 public class coupang_3 {
 	static int result = 0, K, T;
 	static int[] Arr;
 	static void dfs(int idx, int sum, int cnt) {
-		if(cnt >= K && sum <= T) result++; // kê°œ ì´ìƒ í•©ì´ T ì´í•˜ì¸ ê²½ìš°
-		for(int i = idx + 1; i < Arr.length; i++) { // idx + 1 ë²ˆì§¸ë¥¼ ì„ íƒí•˜ë„ë¡
+		if(cnt >= K && sum <= T) result++; // k°³ ÀÌ»óÀ» °í¸¥ ÇÕÀÌ T ÀÌÇÏÀÎ °æ¿ì
+		for(int i = idx + 1; i < Arr.length; i++) { // idx + 1 ºÎÅÍ ½ÃÀÛÇÏ¿© ¶Ç °í¸¥´Ù
 			if(sum + Arr[i] <= T) dfs(i, sum + Arr[i], cnt + 1);
-			// sum + Arr[i]ê°€ Të³´ë‹¤ ì‘ë‹¤ë©´ ì¬ê·€ ì‹¤í–‰
+			// sum + Arr[i]ÀÌ T ÀÌÇÏÀÏ °æ¿ì Àç±Í ½ÇÇà
 		}
 	}
-	// DFS, BFS = ê·¸ë˜í”„ íƒìƒ‰ ë°©ë²• DFS = ì¬ê·€, ë¸Œë£¨íŠ¸í¬ìŠ¤, BFS = í, ìµœë‹¨ê±°ë¦¬
+	// DFS, BFS = ±×·¡ÇÁ Å½»ö ¹æ¹ı,  DFS = Àç±Í, ¹éÆ®·¡Å·, BFS = Å¥, ÃÖ´Ü°Å¸®
 	static public int solution(int[] arr, int k, int t) {
 		Arr = arr;
 		K = k;
