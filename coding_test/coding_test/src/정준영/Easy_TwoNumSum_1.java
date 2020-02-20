@@ -1,11 +1,11 @@
-package Á¤ÁØ¿µ;
+package ì •ì¤€ì˜;
 /*
- * À¯ÁØÇõ ¸àÅä µ¡´ï 2020.02.09 20:26
+ * ìœ ì¤€í˜ ë©˜í†  ë§ëŒ 2020.02.09 20:26
  * ---------------------------
- * ÀÏ¹ÝÀûÀÎ ¹æ¹ý.
- * ´ë¼Ò ±¸ºÐÀÌ ¾øÀÌ ÁÖ¾îÁö¹Ç·Î 3°¡ÁöÀÇ ¿¹¿ÜÃ³¸®¸¦ ÇÏ¿© returnÇÏ´Â ¹æ½Ä.
+ * ì¼ë°˜ì ì¸ ë°©ë²•.
+ * ëŒ€ì†Œ êµ¬ë¶„ì´ ì—†ì´ ì£¼ì–´ì§€ë¯€ë¡œ 3ê°€ì§€ì˜ ì˜ˆì™¸ì²˜ë¦¬ë¥¼ í•˜ì—¬ returní•˜ëŠ” ë°©ì‹.
  * 
- * Æ¯ÀÌÁ¡ : ¼ôÄÚµùÀ» ÇÏ·Á´Â °Ô º¸ÀÓ.
+ * íŠ¹ì´ì  : ìˆì½”ë”©ì„ í•˜ë ¤ëŠ” ê²Œ ë³´ìž„.
  */
 public class Easy_TwoNumSum_1 {
 	 public static void main(String[] args) {
