@@ -2,7 +2,7 @@ package ¿Ãµµøµ;
 
 import java.util.*;
 
-public class prgrmers_42586 {
+public class prgrmers_42586 { 
 	public int[] solution(int[] progresses, int[] speeds) {
 		Queue<Integer> queue = new LinkedList<>();
 		for (int i = 0; i < progresses.length; i++) {
